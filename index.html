@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Beats</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basis */n
+    body { margin: 0; font-family: 'Montserrat', sans-serif; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* Header & Navigation */
+    header { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.7); z-index: 100; }
+    .container { width: 90%; max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1em 0; }
+    .logo { font-size: 1.8em; font-weight: 700; color: #fff; }
+    nav ul { display: flex; gap: 2em; }
+    nav a { color: #fff; font-size: 1em; font-weight: 500; transition: opacity .3s; }
+    nav a:hover { opacity: 0.7; }
+
+    /* Hero */
+    .hero { height: 100vh; background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+    .hero h1 { font-size: 4em; color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
+
+    /* Sections */
+    section { padding: 6em 0; }
+    #band { background: #fff; }
+    #events { background: #f0f0f0; }
+    #media { background: #000; color: #fff; }
+    #contact { background: #fff; }
+    .section-title { text-align: center; font-size: 2.5em; margin-bottom: 0.5em; }
+    .section-content { max-width: 1000px; margin: auto; text-align: center; }
+
+    /* Events Grid */
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2em; }
+    .event { background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .event h3 { margin-bottom: 0.5em; }
+
+    /* Media Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5em; }
+    .gallery img { width: 100%; border-radius: 8px; }
+
+    /* Contact Form */
+    .contact-form { max-width: 600px; margin: auto; display: grid; gap: 1.5em; }
+    .contact-form input, .contact-form textarea { padding: 1em; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+    .contact-form button { padding: 1em; border: none; background: #000; color: #fff; font-size: 1em; font-weight: 700; cursor: pointer; border-radius: 4px; transition: background .3s; }
+    .contact-form button:hover { background: #333; }
+
+    /* Footer */
+    footer { background: #111; color: #fff; text-align: center; padding: 2em 0; }
+
+    /* Sticky header space */
+    .spacer { height: 80px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">The Beats</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="band.html">Band</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="spacer"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Live. Loud. The Beats.</h1>
+  </section>
+
+  <!-- Band -->
+  <section id="band">
+    <h2 class="section-title">Über The Beats</h2>
+    <div class="section-content">
+      <p>Wir sind "The Beats", eine professionelle Cover-Band, die mit Leidenschaft und Energie die größten Hits von heute und gestern zum Leben erweckt.</p>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events">
+    <h2 class="section-title">Bevorstehende Events</h2>
+    <div class="container events-grid">
+      <div class="event"><h3>Sommerfest 2025</h3><p>15. Juni 2025 – Musterstadt Open Air</p></div>
+      <div class="event"><h3>Band Night</h3><p>22. Juli 2025 – Club Beats</p></div>
+      <div class="event"><h3>Private Veranstaltung</h3><p>Datum auf Anfrage</p></div>
+    </div>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <h2 class="section-title">Media</h2>
+    <div class="container gallery">
+      <img src="https://via.placeholder.com/600x400" alt="Live 1">
+      <img src="https://via.placeholder.com/600x400" alt="Live 2">
+      <img src="https://via.placeholder.com/600x400" alt="Backstage">
+      <img src="https://via.placeholder.com/600x400" alt="Publikum">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Kontakt</h2>
+    <div class="container">
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Ihr Name" required>
+        <input type="email" name="email" placeholder="Ihre E-Mail" required>
+        <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Absenden</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 The Beats. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+</body>
+</html>
