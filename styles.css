@@ -1,0 +1,51 @@
+/* normalize.css via CDN oder lokal einbinden */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Basis */
+body { margin: 0; font-family: 'Montserrat', sans-serif; color: #333; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Container */
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Header & Navigation */
+header { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.7); z-index: 100; }
+.logo { font-size: 1.8em; font-weight: 700; color: #fff; }
+nav ul { display: flex; gap: 2em; padding: 1em 0; }
+nav a { color: #fff; font-weight: 500; transition: opacity .3s; }
+nav a:hover, nav a.active { opacity: .7; }
+
+/* Spacer, damit Header nicht verdeckt */
+.spacer { height: 70px; }
+
+/* Hero */
+.hero { height: calc(100vh - 70px); background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+.hero h1 { font-size: 4em; color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); text-align: center; }
+
+/* Section-Default */
+section { padding: 4em 0; }
+.section-title { text-align: center; font-size: 2.5em; margin-bottom: .5em; }
+.section-content { text-align: center; line-height: 1.6; }
+
+/* Band-Liste */
+.band-list { margin: 1em auto; max-width: 400px; text-align: left; }
+.band-list li { margin-bottom: .5em; }
+
+/* Events Grid */
+.events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2em; }
+.event { background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* Media-Galerie */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5em; }
+.gallery img { width: 100%; border-radius: 8px; }
+
+/* Kontaktformular */
+.contact-form { display: grid; gap: 1.5em; max-width: 600px; margin: auto; }
+.contact-form input,
+.contact-form textarea { padding: 1em; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+.contact-form button { padding: 1em; border: none; background: #000; color: #fff; font-weight: 700; border-radius: 4px; cursor: pointer; transition: background .3s; }
+.contact-form button:hover { background: #333; }
+
+/* Footer */
+footer { background: #111; color: #fff; text-align: center; padding: 2em 0; }
